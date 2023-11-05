@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstarp CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Fontawesome CSS Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column p-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th>Rasm</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <button id="add_user" class="btn btn-success p-2 mt-4" style="font-size: 22px;">Add new user</button>
+
+        <!-- Modal window -->
+        <div class="modal_background">
+            <div class="modal_content">
+                <h3 class="mb-4">Modal title</h3>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" autocomplete="username"
+                        placeholder="not your real name"> <br>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="username@gmail.com"> <br>
+
+                    <label id="eye_parent" for="password">
+                        Password
+                        <span onclick="eye_fun()" id="eye"><i class="fa-solid fa-eye"></i></span>
+                    </label>
+                    
+                    <input type="password" name="password" id="password" autocomplete="current-password"
+                        placeholder="set strong password"> <br>
+
+                    <label id="img_label" for="img">
+                        <span>Image</span>
+                        <img src="./img/Group 177.svg" alt="">
+                    </label>
+                    <input type="file" name="img" id="img"> <br>
+
+                    <div class="btn-group mt-4 d-flex gap-3">
+                        <button type="button" id="add" class="btn btn-success">add</button>
+                        <button type="button" id="close" class="btn btn-danger">close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS File -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
